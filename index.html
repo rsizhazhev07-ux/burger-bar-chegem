@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#151917">
+  <meta name="description" content="Burger Bar в Чегеме. Фото блюд, доставка и самовывоз, телефон и маршрут до ул. Ленина, 100А.">
+  <title>Burger Bar — кафе в Чегеме</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    if ((!location.hash || location.hash === '#home') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('play-intro');
+    }
+  </script>
+  <script src="menu.js" defer></script>
+</head>
+<body>
+  <div class="site-intro" aria-hidden="true">
+    <div class="intro-mark">
+      <img src="assets/logo.png" width="246" height="158" alt="">
+      <span>Чегем</span>
+    </div>
+  </div>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="header" id="home">
+    <div class="wrap header-inner">
+      <a href="#home" class="brand" aria-label="Burger Bar, к началу страницы">
+        <img src="assets/logo.png" width="246" height="158" alt="">
+      </a>
+      <nav class="header-nav" aria-label="Разделы сайта">
+        <a href="#menu">Меню</a>
+        <a href="#place">Атмосфера</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <button type="button" class="button button-outline cart-trigger" data-open-cart hidden>Корзина <span class="cart-badge" data-cart-count>0</span></button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-layout">
+        <div class="hero-copy">
+          <p class="kicker"><span class="marker" aria-hidden="true"></span>Чегем · Ленина, 100А</p>
+          <h1 id="hero-title">Burger <span>Bar</span></h1>
+          <p class="hero-description">Бургеры, пицца и роллы. Заходите к нам или соберите заказ с собой.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#menu">Смотреть меню <span aria-hidden="true">↓</span></a>
+            <a class="button button-outline" href="#order">Доставка и самовывоз</a>
+          </div>
+          <div class="hero-meta">
+            <span>Ежедневно 10:00–00:00</span>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="assets/facade.jpg" width="1280" height="853" fetchpriority="high" alt="Вход в Burger Bar с фирменной вывеской и зелёными маркизами">
+          <figcaption>Вход с улицы Ленина</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <div class="section-heading menu-heading">
+          <div>
+            <h2 id="menu-title">Меню</h2>
+            <p class="menu-count" id="menu-status" role="status">85 позиций</p>
+          </div>
+          <div class="menu-search" role="search" hidden>
+            <label class="sr-only" for="dish-search">Найти блюдо в меню</label>
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>
+            <input id="dish-search" type="search" placeholder="Найти блюдо" autocomplete="off" aria-controls="menu-panel">
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-controls" hidden>
+        <div class="wrap filters" role="group" aria-label="Категории меню">
+          <button type="button" data-filter="all" aria-controls="menu-panel" aria-pressed="true">Всё меню</button>
+          <button type="button" data-filter="burgers" aria-controls="menu-panel" aria-pressed="false">Бургеры</button>
+          <button type="button" data-filter="pizza" aria-controls="menu-panel" aria-pressed="false">Пицца</button>
+          <button type="button" data-filter="gyro" aria-controls="menu-panel" aria-pressed="false">Гиро и такос</button>
+          <button type="button" data-filter="hotdogs" aria-controls="menu-panel" aria-pressed="false">Хот-доги</button>
+          <button type="button" data-filter="snacks" aria-controls="menu-panel" aria-pressed="false">Закуски</button>
+          <button type="button" data-filter="rolls" aria-controls="menu-panel" aria-pressed="false">Роллы и маки</button>
+          <button type="button" data-filter="hot-rolls" aria-controls="menu-panel" aria-pressed="false">Горячие роллы</button>
+          <button type="button" data-filter="sets" aria-controls="menu-panel" aria-pressed="false">Сеты роллов</button>
+          <button type="button" data-filter="drinks" aria-controls="menu-panel" aria-pressed="false">Напитки</button>
+        </div>
+      </div>
+
+      <div class="wrap menu-content">
+        <div id="menu-panel">
+          <p class="empty-menu" id="menu-empty" hidden>Ничего не нашли. Попробуйте другое название.</p>
+        <section class="menu-category" data-category="burgers" aria-labelledby="menu-burgers">
+          <h3 id="menu-burgers">Бургеры</h3>
+          <div class="menu-category-body">
+            <div class="menu-groups">
+              <div class="menu-group">
+                <ul class="price-list">
+                  <li class="menu-row"><span>Lux</span><strong>350&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Brooklyn</span><strong>350&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Классика</span><strong>320&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Чизбургер</span><strong>340&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Breakfast</span><strong>350&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Чикен-бургер</span><strong>300&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Мексика</span><strong>350&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Шеф-бургер</span><strong>500&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Мини с курицей</span><strong>200&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Мини с говядиной</span><strong>200&nbsp;₽</strong></li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h4>Добавки</h4>
+                <ul class="price-list">
+                  <li class="menu-row"><span>Халапеньо</span><strong>50&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Говяжья котлета</span><strong>120&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Куриная котлета</span><strong>100&nbsp;₽</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-category" data-category="pizza" aria-labelledby="menu-pizza">
+          <h3 id="menu-pizza">Пицца</h3>
+          <div class="menu-category-body">
+            <div class="menu-groups">
+              <div class="menu-group">
+                <ul class="price-list">
+                  <li class="menu-row"><span>Маргарита</span><strong>450&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Куриная</span><strong>470&nbsp;₽</strong></li>
+                  <li class="menu-row" data-photo="assets/pizza.jpg" data-info="Пицца с пепперони."><span>Пепперони</span><strong>470&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>4 сыра</span><strong>500&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>5 сыров</span><strong>550&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Ассорти</span><strong>560&nbsp;₽</strong></li>
+                  <li class="menu-row" data-photo="assets/pizza-seasons.jpg" data-info="Пицца из четырёх секторов с разными начинками."><span>4 сезона</span><strong>500&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Пицца Рио</span><strong>560&nbsp;₽</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-category" data-category="gyro" aria-labelledby="menu-gyro">
+          <h3 id="menu-gyro">Гиро, шаурма и такос</h3>
+          <div class="menu-category-body">
+            <div class="menu-groups">
+              <div class="menu-group">
+                <h4>Гиро и шаурма</h4>
+                <ul class="price-list">
+                  <li class="menu-row"><span>Гиро</span><strong>320&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Гиро с говядиной</span><strong>360&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Шаурма</span><strong>300&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Шаурма с говядиной</span><strong>340&nbsp;₽</strong></li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h4>Такос</h4>
+                <table class="price-table">
+                  <caption class="sr-only">Цены на такос по размерам</caption>
+                  <thead><tr><th scope="col">Вид</th><th scope="col">Обычный</th><th scope="col">Большой</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">Такос</th><td>360&nbsp;₽</td><td>460&nbsp;₽</td></tr>
+                    <tr><th scope="row">С говядиной</th><td>400&nbsp;₽</td><td>500&nbsp;₽</td></tr>
+                    <tr><th scope="row">С сосиской</th><td>360&nbsp;₽</td><td>460&nbsp;₽</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-category" data-category="hotdogs" aria-labelledby="menu-hotdogs">
+          <h3 id="menu-hotdogs">Хот-доги и завтраки</h3>
+          <div class="menu-category-body">
+            <div class="menu-groups">
+              <div class="menu-group">
+                <h4>Хот-доги</h4>
+                <ul class="price-list">
+                  <li class="menu-row"><span>Стандарт</span><strong>80&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Чак-дог</span><strong>180&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Чили-дог</span><strong>180&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Чиз-дог</span><strong>180&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Твистер</span><strong>260&nbsp;₽</strong></li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h4>Завтраки</h4>
+                <ul class="price-list">
+                  <li class="menu-row"><span>Омлет с овощами и курицей</span><strong>250&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Омлет с овощами и сосиской</span><strong>250&nbsp;₽</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-category" data-category="snacks" aria-labelledby="menu-snacks">
+          <h3 id="menu-snacks">Закуски и соусы</h3>
+          <div class="menu-category-body">
+            <div class="menu-groups">
+              <div class="menu-group">
+                <h4>Закуски</h4>
+                <ul class="price-list">
+                  <li class="menu-row"><span>Картофель фри</span><strong>200&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Картофель по-деревенски</span><strong>200&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Наггетсы <span class="menu-quantity">6 шт.</span></span><strong>240&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Крылышки <span class="menu-quantity">5 шт.</span></span><strong>250&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Стрипсы <span class="menu-quantity">4 шт.</span></span><strong>200&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Креветки в кляре <span class="menu-quantity">6 шт.</span></span><strong>500&nbsp;₽</strong></li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h4>Соусы</h4>
+                <ul class="price-list">
+                  <li class="menu-row"><span>Сырный</span><strong>50&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Кисло-сладкий</span><strong>50&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Кетчуп</span><strong>50&nbsp;₽</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-category" data-category="rolls" aria-labelledby="menu-rolls">
+          <h3 id="menu-rolls">Роллы и маки</h3>
+          <div class="menu-category-body">
+            <div class="menu-groups">
+              <div class="menu-group">
+                <h4>Холодные роллы</h4>
+                <ul class="price-list">
+                  <li class="menu-row"><span>Филадельфия</span><strong>450&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Маримо</span><strong>350&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Сяке туна</span><strong>400&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Авокадо сяке</span><strong>520&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Сяке тар-тар</span><strong>550&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Свежий</span><strong>400&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Калифорния</span><strong>370&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Калифорния с лососем</span><strong>390&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Канада</span><strong>400&nbsp;₽</strong></li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h4>Маки</h4>
+                <ul class="price-list">
+                  <li class="menu-row"><span>Сяке маки</span><strong>200&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Эби маки</span><strong>200&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Унаги маки</span><strong>200&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Авокадо маки</span><strong>180&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Капа маки</span><strong>150&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Чука маки</span><strong>150&nbsp;₽</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-category" data-category="hot-rolls" aria-labelledby="menu-hot-rolls">
+          <h3 id="menu-hot-rolls">Горячие роллы</h3>
+          <div class="menu-category-body">
+            <div class="menu-groups">
+              <div class="menu-group">
+                <h4>Запечённые</h4>
+                <ul class="price-list">
+                  <li class="menu-row"><span>Рио</span><strong>550&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Запечённый с креветкой</span><strong>520&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Запечённый с угрём</span><strong>410&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Запечённый с лососем</span><strong>460&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Запечённый с крабом</span><strong>350&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Калифорния</span><strong>350&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Бешеный лосось</span><strong>500&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Окинава</span><strong>370&nbsp;₽</strong></li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h4>Жареные</h4>
+                <ul class="price-list">
+                  <li class="menu-row"><span>Сяке темпура</span><strong>380&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Эби темпура</span><strong>450&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Цезарь ролл</span><strong>340&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Калифорния</span><strong>350&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Унаги темпура</span><strong>400&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Спайси темпура</span><strong>380&nbsp;₽</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-category" data-category="sets" aria-labelledby="menu-sets">
+          <h3 id="menu-sets">Сеты роллов</h3>
+          <div class="menu-category-body">
+            <div class="menu-groups">
+              <div class="menu-group">
+                <ul class="price-list">
+                  <li class="menu-row"><span>Запечённый сет <span class="menu-quantity">24 шт.</span></span><strong>1&nbsp;250&nbsp;₽</strong>
+                    <p class="menu-description">Рио, Окинава, запечённая Калифорния</p>
+                  </li>
+                  <li class="menu-row"><span>Классический <span class="menu-quantity">24 шт.</span></span><strong>1&nbsp;300&nbsp;₽</strong>
+                    <p class="menu-description">Филадельфия, Канада, Окинава</p>
+                  </li>
+                  <li class="menu-row"><span>Ван Пис <span class="menu-quantity">40 шт.</span></span><strong>1&nbsp;750&nbsp;₽</strong>
+                    <p class="menu-description">Маримо, Свежий, Окинава, запечённый с лососем, Эби маки</p>
+                  </li>
+                  <li class="menu-row"><span>Микс сет <span class="menu-quantity">40 шт.</span></span><strong>1&nbsp;950&nbsp;₽</strong>
+                    <p class="menu-description">Сяке туна, Филадельфия, запечённая Калифорния, Унаги темпура, Маримо</p>
+                  </li>
+                  <li class="menu-row"><span>Бургер Бар сет <span class="menu-quantity">56 шт.</span></span><strong>2&nbsp;850&nbsp;₽</strong>
+                    <p class="menu-description">Рио, Филадельфия, Калифорния, запечённый с креветкой, Окинава, Сяке темпура, Сяке маки</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-category" data-category="drinks" aria-labelledby="menu-drinks">
+          <h3 id="menu-drinks">Напитки</h3>
+          <div class="menu-category-body">
+            <div class="menu-groups">
+              <div class="menu-group">
+                <h4>Чай в чайнике</h4>
+                <ul class="price-list">
+                  <li class="menu-row"><span>Наглый фрукт</span><strong>250&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Зелёный чай</span><strong>250&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>С бергамотом</span><strong>250&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Император</span><strong>250&nbsp;₽</strong></li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h4>Кофе</h4>
+                <ul class="price-list">
+                  <li class="menu-row"><span>Американо</span><strong>150&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Капучино</span><strong>180&nbsp;₽</strong></li>
+                  <li class="menu-row"><span>Эспрессо</span><strong>150&nbsp;₽</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section place" id="place" aria-labelledby="place-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="kicker"><span class="marker" aria-hidden="true"></span>В Burger Bar</p>
+            <h2 id="place-title">Загляните к нам</h2>
+          </div>
+          <p>Можно устроиться на диване с друзьями или сесть у окна с видом на улицу Ленина.</p>
+        </div>
+        <div class="place-photos">
+          <figure>
+            <img src="assets/hall.jpg" width="1536" height="1024" alt="Зал Burger Bar с зелёными диванами и деревянной картой" loading="lazy">
+            <figcaption>Зал Burger Bar</figcaption>
+          </figure>
+          <figure>
+            <img class="counter-photo" src="assets/counter.jpg" width="853" height="1280" alt="Стойка с деревянной эмблемой Burger Bar" loading="lazy">
+            <figcaption>У стойки</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contacts" id="contacts" aria-labelledby="contacts-title">
+      <div class="wrap contact-layout">
+        <div class="contact-copy">
+          <p class="kicker"><span class="marker" aria-hidden="true"></span>Чегем</p>
+          <h2 id="contacts-title">Как нас найти</h2>
+          <address>ул. Ленина, 100А</address>
+          <p class="hours">Ежедневно с 10:00 до 00:00</p>
+          <a class="button button-outline" href="https://yandex.ru/maps/?mode=routes&amp;rtext=~43.566926%2C43.590277&amp;ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D196501219191">Построить маршрут <span aria-hidden="true">↗</span></a>
+          <div class="order" id="order">
+            <h3>Доставка и самовывоз</h3>
+            <p>Выберите блюда в меню. В корзине можно указать самовывоз или адрес доставки и открыть готовый заказ в WhatsApp.</p>
+            <div class="order-links">
+              <a class="button button-primary" href="#menu">Собрать заказ</a>
+              <a class="button button-outline" href="tel:+79298856777">+7 (929) 885-67-77</a>
+              <a class="button button-outline" href="https://wa.me/79298856777">WhatsApp <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <figure class="facade">
+          <img src="assets/window.jpg" width="1536" height="1024" alt="Деревянная стойка у окна и два ретро-телевизора" loading="lazy">
+          <figcaption>Места у окна</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a href="#home" class="brand" aria-label="Burger Bar, к началу страницы"><img src="assets/logo.png" width="246" height="158" alt="" loading="lazy"></a>
+      <p>Чегем, ул. Ленина, 100А</p>
+      <a href="https://yandex.ru/maps/org/burger_bar/196501219191/reviews/">Отзывы на Яндекс Картах <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+
+  <nav class="mobile-actions" aria-label="Быстрые действия">
+    <a href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Меню</a>
+    <a href="#contacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M19 10c0 4-7 10-7 10S5 14 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg>Как найти</a>
+    <a href="tel:+79298856777" data-cart-fallback>Позвонить</a>
+    <button type="button" class="button button-primary cart-trigger" data-open-cart hidden>Корзина <span class="cart-badge" data-cart-count>0</span></button>
+  </nav>
+
+  <dialog id="dish-dialog" class="shop-dialog dish-dialog" aria-labelledby="dish-title">
+    <form method="dialog" class="dialog-close"><button type="submit" aria-label="Закрыть карточку" autofocus>×</button></form>
+    <div id="dish-media" class="item-media"></div>
+    <div class="dialog-content">
+      <p class="kicker" id="dish-category"></p>
+      <h2 id="dish-title"></h2>
+      <p class="dish-note" id="dish-info" hidden></p>
+      <p class="dish-note" id="dish-quantity" hidden></p>
+      <p class="dish-composition"><strong>Состав</strong><span id="dish-composition"></span></p>
+      <fieldset class="choice-field" id="dish-sizes" hidden>
+        <legend>Размер</legend>
+        <div class="choice-options"></div>
+      </fieldset>
+      <button type="button" id="dish-add" class="button button-primary">В корзину <span></span></button>
+    </div>
+  </dialog>
+
+  <dialog id="cart-dialog" class="shop-dialog cart-dialog" aria-labelledby="cart-title">
+    <form method="dialog" class="dialog-close"><button type="submit" aria-label="Закрыть корзину" autofocus>×</button></form>
+    <div class="dialog-content">
+      <p class="kicker">Burger Bar</p>
+      <h2 id="cart-title">Корзина</h2>
+      <p id="cart-empty" class="dish-note">Корзина пока пуста. Выберите блюда в меню.</p>
+      <ul id="cart-lines" class="cart-lines" aria-label="Блюда в корзине"></ul>
+      <form id="order-form" action="https://wa.me/79298856777" method="get" target="_blank" rel="noopener" hidden>
+        <p class="cart-total">Сумма блюд <strong id="cart-total"></strong></p>
+        <fieldset class="choice-field">
+          <legend>Как получить заказ</legend>
+          <div class="choice-options">
+            <label><input type="radio" name="method" value="pickup" checked><span>Самовывоз</span></label>
+            <label><input type="radio" name="method" value="delivery"><span>Доставка</span></label>
+          </div>
+        </fieldset>
+        <p class="dish-note" id="pickup-note">Самовывоз с ул. Ленина, 100А.</p>
+        <label class="order-field" id="address-field" hidden>Адрес доставки
+          <input type="text" id="order-address" maxlength="160" placeholder="Улица, дом, квартира" disabled>
+        </label>
+        <label class="order-field">Комментарий <span>(необязательно)</span>
+          <textarea id="order-comment" rows="2" maxlength="240" placeholder="Например, без острого соуса"></textarea>
+        </label>
+        <input type="hidden" name="text" id="order-message">
+        <button type="submit" class="button button-primary send-order">Открыть заказ в WhatsApp <span aria-hidden="true">↗</span></button>
+        <p class="order-hint">Проверьте сообщение в чате и нажмите «Отправить». Время и стоимость доставки подтвердит Burger Bar.</p>
+      </form>
+    </div>
+  </dialog>
+  <p class="cart-toast" id="cart-feedback" role="status" hidden></p>
+
+  <template id="item-template">
+    <li class="product-card">
+      <button type="button" class="item-open"><span class="item-media"></span><span class="item-name"></span></button>
+      <div class="item-footer"><strong class="item-price"></strong><button type="button" class="item-add"></button></div>
+    </li>
+  </template>
+  <template id="cart-line-template">
+    <li class="cart-line">
+      <div><strong class="line-name"></strong><p class="line-detail"></p></div>
+      <div class="line-quantity"><button type="button" data-step="-1">−</button><span></span><button type="button" data-step="1">+</button></div>
+      <strong class="line-price"></strong>
+    </li>
+  </template>
+</body>
+</html>
